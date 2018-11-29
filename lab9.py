@@ -47,14 +47,14 @@ def menu(payDict):
             if not(Name.isspace()) and Name != "":
                 payList = lookup(payDict, Name)
                 if payList != -1:
-                    janv.setText(payList[0])
-                    febv.setText(payList[1])
-                    marv.setText(payList[2])
-                    totalv.setText(payList[3])
+                    janv.setText(round(payList[0],2))
+                    febv.setText(round(payList[1],2))
+                    marv.setText(round(payList[2],2))
+                    totalv.setText(round(payList[3],2))
                 else:
-                    janv.setText("")
-                    febv.setText("")
-                    marv.setText("")
+                    janv.setText(":2f")
+                    febv.setText(":2f")
+                    marv.setText(":2f")
                     totalv.setText("")
             else:
                 janv.setText("")
